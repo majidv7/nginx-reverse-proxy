@@ -48,5 +48,5 @@ now it's time to test our app! so just type:
 ```bash
 node app.js
 ```
-### hint: if you don't have nodejs package just install it!
+### hint: make sure nodejs package is already installed on your machine
 now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used the nginx reverse proxy!
