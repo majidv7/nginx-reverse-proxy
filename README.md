@@ -15,52 +15,38 @@ then make sure that nginx service is up and running:
 ```bash
 sudo systemctl status nginx
 ```
+if nginx service it's not running just do this!
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx 
+```
 then for testing the proxy server type curl 127.0.0.1 or localhost
 also, you can type localhost ip to ensure it's running on your favorite internet browser!
-then type:
+
+then create the javascript app and name that to app.js
+as you can guess this is a simple app that listens on port 3000 and prints out "Hello, World!" save the file with ":wq"
+
+then hit this command:
 ```bash
 cd /etc/nginx/conf.d
-```
-and add make a file to this directory.
-```bash
 sudo vim nodeapp.conf
-
 ```
-then write this script into it!
+copy the contents of nodeapp into it then save it with :wq
+
+# For testing the app
 ```bash
-const http = require('http');
-
-const hostname = 'localhost';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-```
-as you can guess this is a simple app that listens on port 3000 and prints out "Hello, World!"
-save the file with ":wq"
- 
-write this command:
-```bash
-# to test the app
 sudo nginx -t
 ```
 if you saw a successful test then type this.
+
+# to restart the proxy server!
 ```bash
-# reload to restart the proxy server!
 sudo nginx -s
 ```
 now it's time to test our app! so just type:
+
+### hint: if you don't have nodejs package just install it!
 ```bash
-# if you don't have nodejs package just install it
 node app.js
 ```
-now if you run again curl localhost
-or enter localhost ip in your browser you can see the "hello world"
-so the test succeeded and the app used the nginx reverse proxy!
+now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used the nginx reverse proxy!
