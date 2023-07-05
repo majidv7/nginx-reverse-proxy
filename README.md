@@ -8,6 +8,7 @@ I used a simple javascript app to test our proxy and tried it on a Debian machin
 first, make sure your repos are up-to-date, and install Nginx!
 
 ```bash
+# If you're using a Redhat-based machine just user dnf or yum instead of apt
 sudo apt update -y && sudo apt install nginx -y
 ```
 then make sure that nginx service is up and running:
