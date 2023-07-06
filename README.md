@@ -17,8 +17,7 @@ sudo systemctl status nginx
 ```
 if nginx service it's not running just do this!
 ```bash
-sudo systemctl start nginx
-sudo systemctl enable nginx 
+sudo systemctl enable --now nginx 
 ```
 then for testing the proxy server type curl 127.0.0.1 or localhost
 also, you can type localhost ip to ensure it's running on your favorite internet browser!
