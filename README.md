@@ -5,32 +5,32 @@ I used a simple javascript app to test our proxy and tried it on a Debian machin
 
 ## Installation
 
-first, make sure your repos are up-to-date, and install Nginx!
+First, make sure your repos are up-to-date, and install Nginx
 
 ```bash
 # If you're using a Redhat-based machine just use dnf or yum instead of apt
 sudo apt update -y && sudo apt install nginx -y
 ```
-then make sure that nginx service is up and running:
+Verify nginx service is up and running
 ```bash
 sudo systemctl status nginx
 ```
-if nginx service it's not running just do this!
+If nginx service it's not running RUN the below command
 ```bash
 sudo systemctl enable --now nginx 
 ```
-then for testing the proxy server type curl 127.0.0.1 or localhost
+Then for testing the proxy server type curl 127.0.0.1 or localhost in the terminal
 also, you can type localhost ip to ensure it's running on your favorite internet browser!
 
-then create the javascript app and name that to app.js
+Create this simple javascript app with a text editore like vim and name that to app.js
 as you can guess this is a simple app that listens on port 3000 and prints out "Hello, World!" save the file with ":wq"
 
-then hit this command:
+Now RUN the below commands
 ```bash
 cd /etc/nginx/conf.d
 sudo vim nodeapp.conf
 ```
-copy the contents of nodeapp into it then save it with :wq
+Copy the contents of nodeapp into it then save it with :wq
 
 # For testing the app
 ```bash
@@ -42,10 +42,11 @@ if you saw a successful test then type this.
 ```bash
 sudo nginx -s
 ```
-now it's time to test our app! so just type:
+Once you are done with the above steps it's time to test our app! so just type
 
 ```bash
 node app.js
 ```
 ### hint: make sure nodejs package is already installed on your machine
-now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used the nginx!
+Now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used the nginx!
+
