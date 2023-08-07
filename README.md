@@ -1,7 +1,7 @@
 # nginx-reverse-proxy
 
 Configuring Nginx as Reverse Proxy.
-I used a simple javascript app to test our proxy and tried it on a Debian machine you can test whatever machine you want and follow the instruction!
+I used a simple javascript app to test our proxy and tried it on a Debian machine you can test on whatever machine you want and follow the instruction!
 
 ## Installation
 
@@ -9,7 +9,7 @@ First, make sure your repos are up-to-date, and install Nginx
 
 ```bash
 # If you're using a Redhat-based machine just use dnf or yum instead of apt
-sudo apt update -y && sudo apt install nginx -y
+sudo apt update  && sudo apt install nginx -y
 ```
 Verify nginx service is up and running
 ```bash
@@ -20,9 +20,9 @@ If nginx service it's not running RUN the below command
 sudo systemctl enable --now nginx 
 ```
 Then for testing the proxy server type curl 127.0.0.1 or localhost in the terminal
-also, you can type localhost ip to ensure it's running on your favorite internet browser!
+also, you can type localhost ip to ensure it's running on your favorite browser!
 
-Create this simple javascript app with a text editore like vim and name that to app.js
+Create this simple javascript app with a text editor like vim and name that app.js
 as you can guess this is a simple app that listens on port 3000 and prints out "Hello, World!" save the file with ":wq"
 
 Now RUN the below commands
@@ -36,7 +36,7 @@ Copy the contents of nodeapp into it then save it with :wq
 ```bash
 sudo nginx -t
 ```
-if you saw a successful test then type this.
+if you saw a successful test then:
 
 # to restart the proxy server!
 ```bash
