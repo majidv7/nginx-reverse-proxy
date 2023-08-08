@@ -48,5 +48,5 @@ Once you are done with the above steps it's time to test our app! so just type
 node app.js
 ```
 ### hint: make sure nodejs package is already installed on your machine
-Now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used the nginx!
+Now if you run again curl localhost or enter localhost ip in your browser you can see the "hello world" so the test succeeded and the app used nginx!
 
